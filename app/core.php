@@ -6,7 +6,13 @@
     */
 
     function load($data = ""){
-        view("home/index");
+        if(isset($_GET["pages"])){
+            switch($_GET["pages"]){
+                case "" : view(""); break;
+            }
+        } else {
+            view("home/index");
+        }
     }
 
     function view($path, $data = ""){
