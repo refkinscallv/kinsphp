@@ -9,7 +9,6 @@
     require "setup.php";
     require "database.php";
     require "helper.php";
-    require "middle.php";
 
     /*
     *   follow me : 

@@ -1,0 +1,53 @@
+/* ===== DEFAULT CSS ==== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --white: #ffffff;
+    --gray1: #f8f9fa;
+    --gray2: #e9ecef;
+    --gray3: #dee2e6;
+    --gray4: #ced4da;
+    --gray5: #adb5bd;
+    --gray6: #6c757d;
+    --gray7: #495057;
+    --gray8: #343a40;
+    --gray9: #212529;
+    --black: #000000;
+
+    --blue:    #0d6efd;
+    --indigo:  #6610f2;
+    --purple:  #6f42c1;
+    --pink:    #d63384;
+    --red:     #dc3545;
+    --orange:  #fd7e14;
+    --yellow:  #ffc107;
+    --green:   #198754;
+    --teal:    #20c997;
+    --cyan:    #0dcaf0;
+
+    --uibs: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.selector-for-some-widget {box-sizing:content-box}
+body, html {width:100%;margin:auto;font-size:15px;color:var(--gray9);position:relative;font-family: 'Poppins', sans-serif !important}
+a {color:var(--blue) !important;text-decoration:none !important;cursor:pointer !important}
+a:hover {color:var(--red);text-decoration:none !important}
+textarea {resize:none}
+.full {width:100%;margin:auto}
+.form-label {font-size:13px}
+.form-control:hover, .form-select:hover, .form-input-check:hover, .form-control:focus, .form-select:focus, .form-input-check:focus {border:1px solid var(--blue) !important;box-shadow:none !important}
+.btn:hover, .btn:focus {box-shadow:none !important}
+.table {margin:0 !important;padding:0 !important}
+.table-responsive {margin:20px !important;max-height:100vh !important;overflow-x:auto !important}
+.table thead {border-bottom:1px solid var(--gray3) !important}
+.table tbody {border-top:1px solid var(--gray3) !important}
+
+.row {margin:0px !important;padding:0px !important;width:auto !important}
+.general-row:after {content:"";display:table;clear:both;width:100%;margin:auto}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col {padding:0px !important;margin:0px !important}
+.col-left {margin-right:15px;width:auto}
+.col-right {margin-left:15px;width:auto}
+
+@media screen and (max-widh:720px){
+    .col-left, .col-right {margin:auto}
+}

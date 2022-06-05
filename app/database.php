@@ -6,7 +6,7 @@
     */
 
     if($db->stat == "inactive"){
-        echo "<script>console.error('Database Is Not Active')</script>";
+        echo "";
     } else {
         $_db    = mysqli_connect($db->host, $db->user, $db->pass, $db->name);
 

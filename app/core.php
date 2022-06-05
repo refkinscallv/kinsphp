@@ -11,12 +11,14 @@
                 case "" : view(""); break;
             }
         } else {
-            view("home/index");
+            view("home/index", $data);
         }
     }
 
     function view($path, $data = ""){
+        include "views/template/start.php";
         include "views/". $path .".php";
+        include "views/template/end.php";
     }
 
     /*

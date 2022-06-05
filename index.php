@@ -5,7 +5,13 @@
 
     // load the main condition in the load() function from index
     // can modify the contents of the app/core.php file
-    load();
+
+    $load_data = (object) array(
+        "name"  => $app->name,
+        "url"   => $app->url
+    );
+
+    load($load_data);
 
     /*
     *   follow me : 
