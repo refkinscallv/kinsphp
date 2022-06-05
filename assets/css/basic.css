@@ -48,6 +48,11 @@ textarea {resize:none}
 .col-left {margin-right:15px;width:auto}
 .col-right {margin-left:15px;width:auto}
 
+.error-pages {color:var(--gray9) !important}
+.error-pages h1 {margin:auto auto 25px auto;font-size:40px}
+.error-pages h1 span {font-size:15px !important}
+.error-pages a {color:var(--gray9) !important}
+
 @media screen and (max-widh:720px){
     .col-left, .col-right {margin:auto}
 }

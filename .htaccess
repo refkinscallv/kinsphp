@@ -10,10 +10,10 @@ Options +FollowSymlinks
 RewriteEngine on
 RewriteCond $1 !^(index\.php)
 
-RewriteRule ^400$ views/error/400.php [nc]
-RewriteRule ^401$ views/error/401.php [nc]
-RewriteRule ^403$ views/error/403.php [nc]
-RewriteRule ^404$ views/error/404.php [nc]
-RewriteRule ^406$ views/error/406.php [nc]
-RewriteRule ^500$ views/error/500.php [nc]
-RewriteRule ^503$ views/error/503.php [nc]
+RewriteRule ^400$ views/errors/400.php [nc]
+RewriteRule ^401$ views/errors/401.php [nc]
+RewriteRule ^403$ views/errors/403.php [nc]
+RewriteRule ^404$ views/errors/404.php [nc]
+RewriteRule ^406$ views/errors/406.php [nc]
+RewriteRule ^500$ views/errors/500.php [nc]
+RewriteRule ^503$ views/errors/503.php [nc]

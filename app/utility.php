@@ -65,74 +65,74 @@
     }
 
     // Security
-    function form_validate($_formval, $_formtype, $_formlength = 6){
+    function form_validate($form_val, $form_type, $form_length = 6){
 
-        switch($_formtype){
+        switch($form_type){
             case "alpha"                : 
-                if(!preg_match("/^[a-zA-Z\s_-]+$/", $_formval)){
+                if(!preg_match("/^[a-zA-Z\s_-]+$/", $form_val)){
                     $result = "regex";
                 } else {
-                    $result = $_formval;
+                    $result = $form_val;
                 }
                 break;
             case "numeric"              : 
-                if(!preg_match("/^[0-9-' ]*$/", $_formval)){
+                if(!preg_match("/^[0-9-' ]*$/", $form_val)){
                     $result = "regex";
                 } else {
-                    $result = $_formval;
+                    $result = $form_val;
                 }
                 break;
             case "length"               : 
-                if(strlen($_formval) < $_formlength){
+                if(strlen($form_val) < $form_length){
                     $result = "length";
                 } else {
-                    $result = $_formval;
+                    $result = $form_val;
                 }
                 break;
             case "email"                : 
-                if(!filter_var($_formval, FILTER_VALIDATE_EMAIL)){
+                if(!filter_var($form_val, FILTER_VALIDATE_EMAIL)){
                     $result = "regex";
                 } else {
-                    $result = $_formval;
+                    $result = $form_val;
                 }
                 break;
             case "alpha-length"         : 
-                if(strlen($_formval) < $_formlength){
+                if(strlen($form_val) < $form_length){
                     $result = "length";
                 } else {
-                    if(!preg_match("/^[a-zA-Z\s_-]+$/", $_formval)){
+                    if(!preg_match("/^[a-zA-Z\s_-]+$/", $form_val)){
                         $result = "regex";
                     } else {
-                        $result = $_formval;
+                        $result = $form_val;
                     }
                 }
                 break;
             case "numeric-length"       : 
-                if(strlen($_formval) < $_formlength){
+                if(strlen($form_val) < $form_length){
                     $result = "length";
                 } else {
-                    if(!preg_match("/^[0-9-' ]*$/", $_formval)){
+                    if(!preg_match("/^[0-9-' ]*$/", $form_val)){
                         $result = "regex";
                     } else {
-                        $result = $_formval;
+                        $result = $form_val;
                     }
                 }
                 break;
             case "alpha-numeric"        : 
-                if(!preg_match("/^[a-zA-Z0-9\s_-]+$/", $_formval)){
+                if(!preg_match("/^[a-zA-Z0-9\s_-]+$/", $form_val)){
                     $result = "regex";
                 } else {
-                    $result = $_formval;
+                    $result = $form_val;
                 }
                 break;
             case "alpha-numeric-length" : 
-                if(strlen($_formval) < $_formlength){
+                if(strlen($form_val) < $form_length){
                     $result = "length";
                 } else {
-                    if(!preg_match("/^[a-zA-Z0-9\s_-]+$/", $_formval)){
+                    if(!preg_match("/^[a-zA-Z0-9\s_-]+$/", $form_val)){
                         $result = "regex";
                     } else {
-                        $result = $_formval;
+                        $result = $form_val;
                     }
                 }
                 break;
