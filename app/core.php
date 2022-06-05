@@ -5,7 +5,7 @@
     *   this file contains function for determine result on index
     */
 
-    function load($data){
+    function load($data = ""){
         view("home/index");
     }
 
