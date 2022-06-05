@@ -8,7 +8,7 @@
     require "config.php";
     require "database.php";
     require "helper.php";
-    require "core.php";
+    require "utility.php";
 
     /*
     *   follow me : 
