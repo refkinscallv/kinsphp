@@ -5,10 +5,10 @@
     *   this file contains the skeleton file calls for the system to run
     */
 
-    require "core.php";
-    require "setup.php";
+    require "config.php";
     require "database.php";
     require "helper.php";
+    require "core.php";
 
     /*
     *   follow me : 

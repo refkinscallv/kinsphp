@@ -5,15 +5,9 @@
     *   this file contains function for determine result on index
     */
 
-    function load($data = ""){
-        if(isset($_GET["pages"])){
-            switch($_GET["pages"]){
-                case "" : view(""); break;
-            }
-        } else {
-            view("home/index", $data);
-        }
-    }
+    // function load($data = ""){
+    //     require "app/routes.php";
+    // }
 
     function view($path, $data = ""){
         include "views/template/start.php";
