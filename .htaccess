@@ -10,6 +10,10 @@ Options +FollowSymlinks
 RewriteEngine on
 RewriteCond $1 !^(index\.php)
 
+# Infnityfree Hosting Query String Remover
+RewriteCond %{QUERY_STRING} ^(.*)i=[^&]+(.*)$ [NC]
+RewriteRule ^(.*)$ /$1?%1%2 [R=301,L]
+
 # 1 Query String
 RewriteRule ^([a-zA-Z0-9&=_-]+)$ index.php?pages=$1 [QSA,L]
 RewriteRule ^([a-zA-Z0-9&=_-]+)/$ index.php?pages=$1 [QSA,L]
