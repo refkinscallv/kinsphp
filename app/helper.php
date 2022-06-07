@@ -1,8 +1,10 @@
 <?php
 
     /*
+    *
     *   HELPER FILE
     *   this file contains functions to simplify system use
+    *
     */
 
     function ajaxres($value){
@@ -44,6 +46,9 @@
     }
 
     function unique_file($path, $filename) {
+
+        // check for duplicate files by renaming them with serial numbers
+
         $file_parts = explode(".", $filename);
         $ext = array_pop($file_parts);
         $name = implode(".", $file_parts);

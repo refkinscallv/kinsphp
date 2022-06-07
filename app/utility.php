@@ -1,13 +1,11 @@
 <?php
 
     /*
-    *   CORE FILE
-    *   this file contains function for determine result on index and main function
+    *
+    *   UTILITY FILE
+    *   this file contains function for determine result on system and main function
+    *
     */
-
-    // function load($data = ""){
-    //     require "app/routes.php";
-    // }
 
     // Interface
     function view($path, $data = ""){

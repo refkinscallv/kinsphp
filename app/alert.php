@@ -1,8 +1,12 @@
 <?php
 
     /*
+    *
     *   ALERT FILE
     *   this file contains the display of the execution result message
+    *
+    *   use the switch function to display the results according to the parameters
+    *
     */
 
     switch($alert_message){

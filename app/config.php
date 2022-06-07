@@ -1,9 +1,13 @@
 <?php
 
     /*
-    *   SETUP FILE
+    *
+    *   CONFIG FILE
     *   this file contains an application initializer containing the credentials of the initial
     *   like database, application, user session and library keys
+    *
+    *   function with object value that can be called directly
+    *
     */
 
     function session_setup(){

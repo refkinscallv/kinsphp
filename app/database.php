@@ -1,8 +1,12 @@
 <?php
 
     /*
+    *
     *   DATABASE FILE
     *   this file contains link/to enable database
+    *
+    *   use of standard functions to activate the database
+    *
     */
 
     if($db->stat == "inactive"){
