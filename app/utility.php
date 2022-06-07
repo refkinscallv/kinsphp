@@ -8,25 +8,6 @@
     */
 
     // Interface
-    function model_post($path, $table = "", $type = "", $data = ""){
-        // make sure $data contains value with object type
-        if($table == "" || $table == 0 || $table == null){
-            echo "System Error : table is not set for post data";
-        } else {
-            switch($type){
-                case "insert" : return require "models/post/". $path .".php"; break;
-                case "update" : return require "models/post/". $path .".php"; break;
-                case "delete" : return require "models/post/". $path .".php"; break;
-                default       : echo "System Error : invalid post data execution type";
-            }
-        }
-    }
-
-    function model_get($path){
-        // make sure $data contains value with object type
-        return require "models/get/". $path .".php";
-    }
-
     function view($path, $data = ""){
         require "views/template/start.php";
         require "views/". $path .".php";
@@ -49,6 +30,61 @@
         }
 
         return $result;
+    }
+
+    function query_insert($table, $data){
+        global $_db;
+
+        foreach($data as $data_key => $data_val){
+            $key[]      = $data_key;
+            $value[]    = $data_val;
+        }
+    
+        $extract_key    = implode(",", $key);
+        $extract_value  = implode(",", $value);
+    
+        $query_insert = mysqli_query($_db, "INSERT INTO $table ($extract_key) VALUES ($extract_value)");
+    
+        if($query_insert){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function query_update($table, $data, $id){
+        global $_db;
+
+        foreach($data as $data_key => $data_val){
+            $result[]      = "$data_key = '$data_val'";
+        }
+
+        $result_value   = implode(", ", $result);
+        $result_idkey   = array_keys($id);
+        $result_idval   = array_values($id);
+    
+        $query_update = mysqli_query($_db, "UPDATE $table SET $result_value WHERE $result_idkey[0] = '$result_idval[0]'");
+    
+        if($query_update){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function query_delete($table, $id){
+        global $_db;
+
+        $result_idkey   = array_keys($id);
+        $result_idval   = array_values($id);
+    
+        $query_delete = mysqli_query($_db, "DELETE FROM $table WHERE $result_idkey[0] = '$result_idval[0]'");
+    
+        if($query_delete){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     // Direction

@@ -26,7 +26,7 @@
             "pass"  => "",
             "name"  => "",
             "char"  => "utf8",
-            "stat"  => "active"
+            "stat"  => "inactive"
         );
 
         return $database;
