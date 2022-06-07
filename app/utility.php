@@ -33,6 +33,10 @@
         require "views/template/end.php";
     }
 
+    function controller($path){
+        require "controllers/". $path .".php";
+    }
+
     // MySQL
     function query($sql){
         global $_db;
