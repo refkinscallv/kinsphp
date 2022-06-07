@@ -95,12 +95,12 @@
     function thisalert($alert_status, $alert_message){
         switch($alert_status){
             case "0" :
-                echo "<script>Swal.fire({title: 'Kesalahan', html: '";
+                echo "<script>Swal.fire({html: '";
                 include "alert.php";
-                echo "', icon: 'error', confirmButtonText: 'Tutup', confirmButtonColor: '#dc3545'});</script>";
+                echo "', icon: 'error', confirmButtonText: 'Close', confirmButtonColor: '#dc3545'});</script>";
                 break;
             case "1" :
-                echo "<script>Swal.fire({title: 'Sukses', html: '";
+                echo "<script>Swal.fire({html: '";
                 include "alert.php";
                 echo "', icon: 'success', confirmButtonText: 'Ok', confirmButtonColor: '#198754'});</script>";
                 break;
