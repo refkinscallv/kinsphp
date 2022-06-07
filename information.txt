@@ -3,5 +3,4 @@ PHP Version (min)       : 7+
 PHP Extension           : Standard PHP 7+ or Default
 
 Default Frontend Source : - SweetAlert2 (min version 11+) https://cdn.jsdelivr.net/npm/sweetalert2@11
-                          - Bootstrap (min version 5+) https://getbootstrap.com/docs/5.0/getting-started/introduction/
-                          - jQuery (min version 3.6.0) https://jquery.com/download/
+                          - jQuery (min version 3.6.0)
