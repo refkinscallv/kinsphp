@@ -10,17 +10,6 @@ Options +FollowSymlinks
 RewriteEngine on
 RewriteCond $1 !^(index\.php)
 
-# Infnityfree Hosting Query String Remover
-RewriteCond %{QUERY_STRING} ^(.*)i=[^&]+(.*)$ [NC]
-RewriteRule ^(.*)$ /$1?%1%2 [R=301,L]
-
-# 1 Query String
-RewriteRule ^([a-zA-Z0-9&=_-]+)$ index.php?pages=$1 [QSA,L]
-RewriteRule ^([a-zA-Z0-9&=_-]+)/$ index.php?pages=$1 [QSA,L]
-
-# 2 Query String
-RewriteRule ^sample/([^/\.]+)/?$ index.php?pages=sample&id=$1 [L]
-
 RewriteRule ^400$ views/errors/400.php [nc]
 RewriteRule ^401$ views/errors/401.php [nc]
 RewriteRule ^403$ views/errors/403.php [nc]
@@ -28,3 +17,10 @@ RewriteRule ^404$ views/errors/404.php [nc]
 RewriteRule ^406$ views/errors/406.php [nc]
 RewriteRule ^500$ views/errors/500.php [nc]
 RewriteRule ^503$ views/errors/503.php [nc]
+
+# 1 Query String
+RewriteRule ^([a-zA-Z0-9&=_-]+)$ index.php?pages=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9&=_-]+)/$ index.php?pages=$1 [QSA,L]
+
+# 2 Query String
+RewriteRule ^sample/([^/\.]+)/?$ index.php?pages=sample&id=$1 [L]
