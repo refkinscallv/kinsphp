@@ -15,7 +15,8 @@
 
     if(isset($_GET["pages"])){
         switch($_GET["pages"]){
-            // case "" : include "controllers/YOUR_FILE.php"; break;
+            // case "PAGES_NAME" : include "controllers/YOUR_FILE.php"; break;
+            // case "PAGES_NAME" : include "controllers/YOUR_FOLDER/YOUR_FILE.php"; break;
             default : redirect("/404");
         }
     } else {
