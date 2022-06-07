@@ -31,7 +31,7 @@
     *       $query = query_update("YOUR TABLE DATABASE", $data, array("id" => $id));
     *
     *       # DELETE
-    *       $query = query_update("YOUR TABLE DATABASE", array("id" => $id));
+    *       $query = query_delete("YOUR TABLE DATABASE", array("id" => $id));
     *
     *        if($query){
     *            echo "success";
