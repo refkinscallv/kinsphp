@@ -24,7 +24,7 @@
             "host"  => "localhost",
             "user"  => "root",
             "pass"  => "",
-            "name"  => "jobmail",
+            "name"  => "",
             "char"  => "utf8",
             "stat"  => "active"
         );
