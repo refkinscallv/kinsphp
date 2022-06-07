@@ -1,6 +1,10 @@
 <?php 
     
-    // call system mainframe
+    /*
+    *
+    *   let's start from here
+    *
+    */
     require "app/run.php";
 
     /*
