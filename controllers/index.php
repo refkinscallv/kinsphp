@@ -12,6 +12,18 @@
     *        "key4"  => $query->value4
     *    );
     *
+    *    or
+    *
+    *    $query    = query("SELECT * FROM sample WHERE id = 1");
+    *    $result   = mysqli_fetch_object($query);    
+    *
+    *    $data   = (object) array(
+    *        "key1"  => $result->value1,
+    *        "key2"  => $result->value2,
+    *        "key3"  => $result->value3,
+    *        "key4"  => $result->value4
+    *    );
+    *
     */
 
     // Sample Post Data
