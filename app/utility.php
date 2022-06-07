@@ -8,9 +8,18 @@
     */
 
     // Interface
-    function model_post($path, $data = ""){
+    function model_post($path, $table = "", $type = "", $data = ""){
         // make sure $data contains value with object type
-        return require "models/post/". $path .".php";
+        if($table == "" || $table == 0 || $table == null){
+            echo "System Error : table is not set for post data";
+        } else {
+            switch($type){
+                case "insert" : return require "models/post/". $path .".php"; break;
+                case "update" : return require "models/post/". $path .".php"; break;
+                case "delete" : return require "models/post/". $path .".php"; break;
+                default       : echo "System Error : invalid post data execution type";
+            }
+        }
     }
 
     function model_get($path){
