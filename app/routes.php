@@ -15,8 +15,8 @@
 
     if(isset($_GET["pages"])){
         switch($_GET["pages"]){
-            case "" : include "controller/.php"; break;
+            case "" : include "controllers/.php"; break;
         }
     } else {
-        include "controller/index.php";
+        include "controllers/index.php";
     }

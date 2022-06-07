@@ -10,18 +10,18 @@
     // Interface
     function model_post($path, $data = ""){
         // make sure $data contains value with object type
-        include "models/post/". $path .".php";
+        return require "models/post/". $path .".php";
     }
 
     function model_get($path){
         // make sure $data contains value with object type
-        include "models/get/". $path .".php";
+        return require "models/get/". $path .".php";
     }
 
     function view($path, $data = ""){
-        include "views/template/start.php";
-        include "views/". $path .".php";
-        include "views/template/end.php";
+        require "views/template/start.php";
+        require "views/". $path .".php";
+        require "views/template/end.php";
     }
 
     // MySQL
@@ -35,8 +35,8 @@
         global $_db;
 
         $query  = mysqli_query($_db, $sql);
-        while($data = mysqli_fetch_object($query)){
-            $result[] = $data;
+        while($data = mysqli_fetch_assoc($query)){
+            $result = (object) $data;
         }
 
         return $result;

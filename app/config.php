@@ -24,9 +24,9 @@
             "host"  => "localhost",
             "user"  => "root",
             "pass"  => "",
-            "name"  => "",
+            "name"  => "jobmail",
             "char"  => "utf8",
-            "stat"  => "inactive"
+            "stat"  => "active"
         );
 
         return $database;
