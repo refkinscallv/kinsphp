@@ -8,6 +8,16 @@
     */
 
     // Interface
+    function model_post($path, $data = ""){
+        // make sure $data contains value with object type
+        include "models/post/". $path .".php";
+    }
+
+    function model_get($path){
+        // make sure $data contains value with object type
+        include "models/get/". $path .".php";
+    }
+
     function view($path, $data = ""){
         include "views/template/start.php";
         include "views/". $path .".php";
