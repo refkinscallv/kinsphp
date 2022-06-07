@@ -10,6 +10,13 @@ Options +FollowSymlinks
 RewriteEngine on
 RewriteCond $1 !^(index\.php)
 
+# 1 Query String
+RewriteRule ^([a-zA-Z0-9&=_-]+)$ index.php?pages=$1 [QSA,L]
+RewriteRule ^([a-zA-Z0-9&=_-]+)/$ index.php?pages=$1 [QSA,L]
+
+# 2 Query String
+RewriteRule ^sample/([^/\.]+)/?$ index.php?pages=sample&id=$1 [L]
+
 RewriteRule ^400$ views/errors/400.php [nc]
 RewriteRule ^401$ views/errors/401.php [nc]
 RewriteRule ^403$ views/errors/403.php [nc]
