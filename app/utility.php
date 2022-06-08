@@ -9,6 +9,9 @@
 
     // Interface
     function view($path, $data = ""){
+        global $app;
+        global $local;
+        
         require "views/template/start.php";
         require "views/". $path .".php";
         require "views/template/end.php";

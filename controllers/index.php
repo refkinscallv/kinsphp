@@ -54,9 +54,6 @@
     *
     */
 
-    $data   = (object) array(
-        "title"  => $app->name,
-        "url"   => $app->url
-    );
+    $data   = (object) array("");
 
     view("home/index", $data);
