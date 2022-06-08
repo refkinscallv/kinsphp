@@ -2,9 +2,9 @@
     <div class="float">
 
         <div class="content text-center">
-            <h1 class="header"><?= $data->title ?></h1>
+            <h1 class="header"><?= $app->name ?></h1>
             <div class="slug">
-                <b><?= $data->title ?></b> is a PHP Procedural Framework Web Application<br />
+                <b><?= $app->name ?></b> is a PHP Procedural Framework Web Application<br />
                 create web applications with semi-MVC concepts
             </div>
             <div class="link">
