@@ -1,0 +1,6 @@
+App Version             : 1.0
+PHP Version (min)       : 7+
+PHP Extension           : Standard PHP 7+ or Default
+
+Default Frontend Source : - SweetAlert2 (min version 11+) https://cdn.jsdelivr.net/npm/sweetalert2@11
+                          - jQuery (min version 3.6.0)

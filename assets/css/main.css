@@ -1,0 +1,11 @@
+.wrapper {position:relative;height:100vh;overflow:auto}
+.float {position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:100%;margin:auto}
+.content {padding:20px;width:50%;margin:auto}
+
+.header {margin:auto auto 20px auto;font-weight:bold}
+.slug {margin:auto auto 40px auto;}
+.link {margin:auto auto 40px auto}
+
+@media screen and (max-width:720px){
+    .content {width:100%}
+}
